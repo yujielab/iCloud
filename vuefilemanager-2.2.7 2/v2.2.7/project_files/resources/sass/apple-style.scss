@@ -1,0 +1,113 @@
+// Apple-style components
+
+// Base styles
+body {
+    @apply font-sans text-apple-gray-600 bg-apple-gray-50;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Buttons
+.btn-apple {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-apple-sm
+           transition-all duration-200 ease-in-out
+           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-apple-blue;
+
+    &.btn-primary {
+        @apply bg-apple-blue text-white hover:bg-opacity-90;
+    }
+
+    &.btn-secondary {
+        @apply bg-apple-gray-100 text-apple-gray-600 hover:bg-apple-gray-200;
+    }
+}
+
+// Cards
+.card-apple {
+    @apply bg-white rounded-apple shadow-apple p-6
+           dark:bg-dark-foreground dark:shadow-apple-dark;
+
+    &.glass {
+        @apply bg-opacity-70 backdrop-blur-apple;
+    }
+}
+
+// Navigation
+.nav-apple {
+    @apply fixed top-0 w-full bg-white bg-opacity-70 backdrop-blur-apple
+           border-b border-apple-gray-200 z-50
+           dark:bg-dark-background dark:border-apple-gray-600;
+}
+
+// Input fields
+.input-apple {
+    @apply block w-full px-4 py-2 text-apple-gray-600 bg-apple-gray-100
+           border-0 rounded-apple-sm
+           focus:ring-2 focus:ring-apple-blue focus:outline-none
+           dark:bg-2x-dark-foreground dark:text-white;
+}
+
+// File items
+.file-item {
+    @apply flex items-center p-4 rounded-apple-sm
+           hover:bg-apple-gray-100 transition-colors duration-200
+           dark:hover:bg-2x-dark-foreground;
+}
+
+// Sidebar
+.sidebar-apple {
+    @apply fixed left-0 h-full w-64 bg-apple-gray-100 bg-opacity-70
+           backdrop-blur-apple border-r border-apple-gray-200
+           dark:bg-dark-foreground dark:border-apple-gray-600;
+}
+
+// Modals
+.modal-apple {
+    @apply fixed inset-0 overflow-y-auto;
+
+    .modal-content {
+        @apply relative bg-white rounded-apple shadow-apple mx-auto my-16 max-w-lg
+               dark:bg-dark-foreground;
+    }
+
+    .modal-backdrop {
+        @apply fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm;
+    }
+}
+
+// Tooltips
+.tooltip-apple {
+    @apply absolute bg-apple-gray-600 text-white px-2 py-1 text-xs rounded-apple-sm
+           shadow-apple-dark;
+}
+
+// Progress bars
+.progress-apple {
+    @apply bg-apple-gray-200 rounded-full overflow-hidden;
+
+    .progress-bar {
+        @apply bg-apple-blue h-full transition-all duration-300;
+    }
+}
+
+// Alerts
+.alert-apple {
+    @apply p-4 rounded-apple mb-4;
+
+    &.alert-success {
+        @apply bg-apple-green bg-opacity-10 text-apple-green;
+    }
+
+    &.alert-error {
+        @apply bg-apple-red bg-opacity-10 text-apple-red;
+    }
+
+    &.alert-warning {
+        @apply bg-apple-yellow bg-opacity-10 text-apple-gray-600;
+    }
+}
+
+// Dark mode overrides
+.dark {
+    @apply bg-dark-background text-white;
+} 
